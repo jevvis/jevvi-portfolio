@@ -70,7 +70,7 @@ export default function WorkGallery() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 gap-4">
+        <div className="flex flex-col md:flex-row items-start md:justify-between mb-12 gap-6">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-[var(--muted)] mb-3">SELECTED WORK</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-3">Work Gallery</h2>
@@ -93,7 +93,7 @@ export default function WorkGallery() {
 
         {/* Carousel */}
         <div className="relative">
-          <div className="flex items-center justify-center gap-4 py-8">
+          <div className="flex items-center justify-center gap-2 md:gap-4 py-8 overflow-hidden">
             {projects.map((project, index) => {
               const offset = index - activeIndex
               const isActive = index === activeIndex
@@ -106,10 +106,10 @@ export default function WorkGallery() {
                   key={project.id}
                   className="cursor-pointer transition-all duration-500 ease-out shrink-0"
                   style={{
-                    transform: `translateX(${offset * 20}px) scale(${isActive ? 1 : 0.75 - absOffset * 0.05}) perspective(1000px) rotateY(${offset * -5}deg)`,
-                    opacity: isActive ? 1 : 0.5 - absOffset * 0.1,
+                    transform: `translateX(${offset * 15}px) scale(${isActive ? 1 : 0.85 - absOffset * 0.05}) perspective(1000px) rotateY(${offset * -5}deg)`,
+                    opacity: isActive ? 1 : 0.4 - absOffset * 0.1,
                     zIndex: 10 - absOffset,
-                    width: isActive ? 'clamp(300px, 50vw, 600px)' : 'clamp(200px, 30vw, 400px)',
+                    width: isActive ? 'clamp(240px, 60vw, 600px)' : 'clamp(160px, 40vw, 400px)',
                   }}
                   onClick={() => setActiveIndex(index)}
                 >
@@ -141,7 +141,7 @@ export default function WorkGallery() {
           {/* Arrow buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors z-20"
+            className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors z-20 shadow-lg"
             aria-label="Previous project"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -150,7 +150,7 @@ export default function WorkGallery() {
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors z-20"
+            className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-colors z-20 shadow-lg"
             aria-label="Next project"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -8,18 +8,18 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center overflow-hidden pointer-events-none">
         <div className="flex w-max whitespace-nowrap animate-marquee">
           <div className="flex shrink-0">
-            <span className="text-outline font-oswald text-[clamp(150px,20vw,350px)] font-bold tracking-normal pr-16 select-none">
+            <span className="text-outline font-oswald text-[clamp(80px,20vw,350px)] font-bold tracking-normal pr-8 md:pr-16 select-none">
               JEVVI SUPRATAMA
             </span>
-            <span className="text-outline font-oswald text-[clamp(150px,20vw,350px)] font-bold tracking-normal pr-16 select-none">
+            <span className="text-outline font-oswald text-[clamp(80px,20vw,350px)] font-bold tracking-normal pr-8 md:pr-16 select-none">
               JEVVI SUPRATAMA
             </span>
           </div>
           <div className="flex shrink-0">
-            <span className="text-outline font-oswald text-[clamp(150px,20vw,350px)] font-bold tracking-normal pr-16 select-none">
+            <span className="text-outline font-oswald text-[clamp(80px,20vw,350px)] font-bold tracking-normal pr-8 md:pr-16 select-none">
               JEVVI SUPRATAMA
             </span>
-            <span className="text-outline font-oswald text-[clamp(150px,20vw,350px)] font-bold tracking-normal pr-16 select-none">
+            <span className="text-outline font-oswald text-[clamp(80px,20vw,350px)] font-bold tracking-normal pr-8 md:pr-16 select-none">
               JEVVI SUPRATAMA
             </span>
           </div>
@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll down indicator */}
-      <div className="absolute right-6 bottom-10 z-20 flex items-center gap-2">
+      <div className="absolute right-2 md:right-6 bottom-10 z-20 hidden sm:flex items-center gap-2">
         <span
           className="text-[10px] tracking-[0.3em] font-medium text-[var(--muted)] uppercase"
           style={{ writingMode: 'vertical-rl' }}
